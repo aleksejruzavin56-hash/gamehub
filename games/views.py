@@ -13,7 +13,8 @@ def top_games(request):
     games = models.Game.objects.order_by('-raing')[:5]
     return render(request, 'top_game.html', {'games': games})
 def game_detail(request, id):
-    games = models.Game.objects.filter(pk=id)
+    games = models.Game.objects.filter(pk=id)#.values("genre__title")
+    print(games)
     if games.count() == 0:
         return render(request, '404.html')
     return render(request, 'game_detail.html', {'game': games[0]})
