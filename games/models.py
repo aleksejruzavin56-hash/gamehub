@@ -14,3 +14,8 @@ class Game(models.Model):
 class GameGenre(models.Model):
     title = models.CharField(max_length=100)
     genre = models.CharField(max_length=100)
+class GameInfo(models.Model):
+    game = models.OneToOneField(Game, on_delete=models.CASCADE)
+    description = models.TextField()
+    steam_url = models.URLField()
+    image = models.ImageField(upload_to="media/games/")
