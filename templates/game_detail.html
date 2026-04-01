@@ -7,7 +7,10 @@
 <body>
 <h1>Название: {{game.title}}</h1>
 <h1>Жанр: {{game.genre.title}}</h1>
-<h1>рейтинг: {{game.raing}}</h1>
-<h1>дата: {{game.date}}</h1>
+<h1>Рейтинг: {{game.raing}}</h1>
+<h1>Дата: {{game.date}}</h1>
+<img src = "{{game.gameinfo.image.url}}">
+<h3>Описание: {{game.gameinfo.description}}</h3>
+<a href = "{{game.gameinfo.steam_url}}"> Страница стим</a>
 </body>
 </html>

@@ -18,4 +18,4 @@ class GameInfo(models.Model):
     game = models.OneToOneField(Game, on_delete=models.CASCADE)
     description = models.TextField()
     steam_url = models.URLField()
-    image = models.ImageField(upload_to="media/games/")
+    image = models.ImageField(upload_to="games/")
